@@ -1,0 +1,415 @@
+@font-face {
+  font-family: Telegraf;
+  src: url(assest/font/PPTelegraf-Regular.otf);
+}
+@font-face {
+  font-family: TelegrafBold;
+  src: url(assest/font/PPTelegraf-Ultrabold.otf);
+}
+@font-face {
+  font-family: Helios;
+  src: url(assest/font/heliosext.otf);
+}
+@font-face {
+  font-family: HeliosBold;
+  src: url(assest/font/heliosext-bold.otf);
+}
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  z-index: 99;
+}
+.back-to-top:hover {
+  background: var(--bs-dark);
+  color: var(--bs-primary);
+}
+
+/*** Button Start ***/
+.btn {
+  font-weight: 600;
+  transition: 0.5s;
+}
+.btn-square {
+  width: 38px;
+  height: 38px;
+}
+.btn-sm-square {
+  width: 32px;
+  height: 32px;
+}
+.btn-md-square {
+  width: 46px;
+  height: 46px;
+}
+.btn-lg-square {
+  width: 58px;
+  height: 58px;
+}
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+}
+.btn.btn-primary:hover {
+  color: var(--bs-primary) !important;
+  background: var(--bs-dark) !important;
+  border-color: var(--bs-dark) !important;
+}
+.btn.btn-dark:hover {
+  color: var(--bs-dark) !important;
+  background: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+/*** Button End ***/
+
+/*** Navbar Start ***/
+.fixed-top {
+  transition: 0.5s;
+}
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-family: Helios;
+}
+.navbar .navbar-nav .nav-link {
+  padding: 12px;
+  color: var(--bs-dark);
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link:hover,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link.active {
+  color: var(--bs-primary);
+}
+.navbar .dropdown-toggle::after {
+  border: none;
+  content: "\f107";
+  font-family: Helios;
+  font-weight: 700;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+@media (min-width: 992px) {
+  .navbar-collapse {
+    background: transparent !important;
+  }
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    visibility: hidden;
+    top: 100%;
+    transform: rotateX(-75deg);
+    transform-origin: 0% 0%;
+    border: 0;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    transition: 0.5s;
+    opacity: 1;
+  }
+}
+.navbar-toggler {
+  background: var(--bs-secondary);
+  color: var(--bs-light) !important;
+  padding: 10px 20px;
+  border: 2px solid var(--bs-primary) !important;
+  box-shadow: none !important;
+}
+/*** Navbar End ***/
+
+/*** Hero Header ***/
+.hero-header {
+  margin-bottom: 2rem;
+  height: 100vh;
+  background: url("assest/img/hero.jpg"), center center no-repeat;
+  background-size: cover;
+}
+.hero-header .hero-header-inner {
+  padding: 3rem;
+}
+.hero-header .hero-header-inner h1,
+.hero-header .hero-header-inner p {
+  font-family: Helios;
+}
+@media (max-width: 992px) {
+  .hero-header {
+    height: 100vh;
+  }
+}
+.hero-header .breadcrumb-item {
+  font-size: 18px;
+}
+/*** Hero Header ***/
+
+/*** About Section ***/
+.about-biru {
+  font-family: Helios;
+  font-size: 30px;
+}
+.about-judul {
+  font-family: Helios;
+  font-size: 40px;
+}
+.about-text {
+  font-family: Telegraf;
+  font-size: 16px;
+}
+/*** About Section ***/
+
+/*** Bar Section ***/
+.bar {
+  height: 40vh;
+  background: url("assest/img/bar.jpg"), center center no-repeat;
+  background-size: contain;
+}
+.bar .bar-inner {
+  padding: 3rem;
+}
+.bar .bar-inner h1 {
+  font-family: Helios;
+  font-size: 38px;
+}
+.bar .bar-inner p {
+  font-family: Helios;
+}
+@media (max-width: 992px) {
+  .bar {
+    height: 100vh;
+  }
+}
+.bar .breadcrumb-item {
+  font-size: 18px;
+}
+/*** Bar Section ***/
+
+/*** Fasilitas Section ***/
+#fasilitas {
+  background-color: rgb(248, 248, 248);
+}
+.fasilitas .fasilitas-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 45px rgba(12, 18, 20, 0.08);
+  transition: 0.5s;
+}
+.fasilitas .fasilitas-item:hover {
+  background: var(--bs-primary) !important;
+  color: var(--bs-dark) !important;
+}
+.fasilitas .fasilitas-item:hover a {
+  background: var(--bs-light) !important;
+  color: var(--bs-dark) !important;
+}
+.fasilitas .fasilitas-item:hover a:hover {
+  background: var(--bs-dark) !important;
+  color: var(--bs-primary) !important;
+}
+.fas-judul {
+  font-family: Helios;
+  font-size: 40px;
+}
+.fas-nama {
+  font-family: Helios;
+  font-size: 40px;
+}
+.fas-text {
+  font-family: Telegraf;
+  font-size: 16px;
+}
+/*** Fasilitas Section ***/
+
+/*** Artikel Start ***/
+.blog-item {
+  height: 100%;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+}
+.blog-item img {
+  transition: 0.5s;
+}
+.blog-item:hover img {
+  transform: scale(1.2);
+}
+.blog-item .blog-meta a,
+.blog-item .blog-meta a i {
+  transition: 0.5s;
+}
+.blog-item .blog-meta a:hover,
+.blog-item .blog-meta a i:hover {
+  color: var(--bs-primary) !important;
+}
+.blog-judul {
+  font-family: Helios;
+  font-size: 64px;
+}
+.blog-judul2 {
+  font-family: Helios;
+  font-size: 72px;
+}
+.blog-nama {
+  font-family: Helios;
+  font-size: 24px;
+}
+.blog-pj {
+  font-family: Telegraf;
+  font-size: 16px;
+}
+/*** Artikel End ***/
+
+/*** Footer Start ***/
+.footer {
+  margin-top: 3rem;
+  background: var(--bs-dark);
+}
+.footer .footer-item p {
+  font-size: 16px;
+  line-height: 35px;
+}
+.footer .border-top,
+.footer .border-bottom {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+.footer button {
+  border: 0;
+  transition: 0.5s;
+}
+.footer button:hover {
+  background: var(--bs-dark);
+  color: var(--bs-primary);
+}
+.footer-item a.btn.btn-light:hover {
+  background: var(--bs-primary);
+  color: var(--bs-dark) !important;
+  border: var(--bs-primary);
+}
+.footer-item a,
+.footer-item a i {
+  transition: 0.5s;
+}
+.footer-item a:hover,
+.footer-item a i:hover {
+  color: var(--bs-primary) !important;
+}
+.foot-judul {
+  font-family: Helios;
+  font-size: 36px;
+}
+.foot-nama {
+  font-family: Helios;
+  font-size: 24px;
+}
+.foot-pj {
+  font-family: Telegraf;
+  font-size: 16px;
+}
+/*** Footer End ***/
+
+/*** Team Start ***/
+.team .team-img {
+  height: 100%;
+  background: var(--bs-white);
+  overflow: hidden;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+}
+.team .team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team .team-item {
+  position: relative;
+  overflow: hidden;
+}
+.team .team-item img {
+  transition: 0.5s;
+}
+.team .team-item:hover img {
+  transform: scale(1.2);
+}
+.team .team-item .team-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  transform: translateX(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+.team .team-item:hover .team-content {
+  opacity: 1;
+  background: rgba(65, 169, 230, 0.7);
+}
+.team-judul {
+  font-family: Helios;
+  font-size: 64px;
+}
+.team-nama-utama {
+  font-family: Helios;
+  font-size: 40px;
+}
+.team-nama {
+  font-family: Helios;
+  font-size: 18px;
+}
+.team-jabatan-utama {
+  font-family: Telegraf;
+  font-size: 18px;
+}
+.team-jabatan {
+  font-family: Telegraf;
+  font-size: 16px;
+}
+/*** Team End ***/
+
+/*** Events Start ***/
+.event-item img {
+  transition: 0.5s;
+}
+.event .event-item a {
+  transition: 0.5s;
+}
+.event-item:hover img {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+.event-item a:hover {
+  background: var(--bs-dark);
+  color: var(--bs-primary);
+  opacity: 0.5s;
+}
+.event-judul {
+  font-family: Helios;
+  font-size: 64px;
+}
+.event-nama {
+  font-family: Helios;
+  font-size: 32px;
+}
+.event-text {
+  font-family: Telegraf;
+  font-size: 16px;
+}
+/*** Events End ***/
